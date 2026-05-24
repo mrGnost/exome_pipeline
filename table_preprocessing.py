@@ -257,7 +257,7 @@ def preprocess_tables(
         X3 = t3.values.astype(float)
 
     X = np.hstack([X1, X2, X3, allele_match_array])
-    print(f"Allele matches: {len(allele_match_array == 1.0)}")
+    print(f"Allele matches: {len(allele_match_array[allele_match_array == 1.0])}")
 
     return X, common_ids, feature_names, scaler
 
